@@ -22,7 +22,7 @@
 // protos for function, it may match @_cdecl("CallBackModule")
 intptr_t CallBackModule(intptr_t);
 
-intptr_t invoke_C_Callback(intptr_t x) {
+intptr_t invoke_Swift_Callback(intptr_t x) {
     long result = CallBackModule(x);
     return result;
 }
@@ -35,7 +35,7 @@ void *inc_x(void *x_void_ptr)
     while(*x_ptr < 10)
     {
         printf("x: %ld\n", *x_ptr);
-        *x_ptr = invoke_C_Callback( *x_ptr);
+        *x_ptr = invoke_Swift_Callback( *x_ptr);
         usleep(2000000);
     }
     

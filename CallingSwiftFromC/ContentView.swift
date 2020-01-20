@@ -79,8 +79,7 @@ struct ContentView_Previews: PreviewProvider {
 
 
 @_cdecl("CallBackModule")
-func CCallback(x: Int) -> Int {
-    
-    ContentView.set(x: x)
+func swiftCallback(x: Int) -> Int {
+    // swift process data...
     return x + 2
 }
