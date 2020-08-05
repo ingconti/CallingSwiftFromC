@@ -63,11 +63,11 @@ struct ContentView: View {
     
     private func runMyTimer(){
         // use a timee to access buffer.
-        // (we CANNOT access member vars... wuodl be nice if we could set directly:
+        // (we CANNOT access member vars... would be nice if we could set directly:
         //   @State private var message
         // rthat is observed.. but globals cannot be observed.
 
-        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        let _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.message = buffer
         }
     }
